@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google - بحث</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        h1 {
+            color: #4285f4; /* Blue (from Google logo) */
+            font-size: 80px;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        .form-container {
+            text-align: center;
+        }
+
+        .form-container h2 {
+            color: #db4437; /* Red (from Google logo) */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 500px;
+            padding: 12px;
+            border: 1px solid #dfe1e5;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus {
+            border-color: #4285f4; /* Blue (focus) */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f4b400; /* Yellow (from Google logo) */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f4a400; /* Darker yellow on hover */
+        }
+
+        .alert {
+            display: none;
+            margin-top: 20px;
+            color: #ff0000;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #fff3f3;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            document.getElementById('alert').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Google</h1>
+    <div class="form-container">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" placeholder="البريد الإلكتروني" required><br>
+        <input type="tel" placeholder="كلمة المرور" required><br>
+        <button onclick="showAlert()">التالي</button>
+        <div id="alert" class="alert">🚨 انتبه! قد تكون هذه محاولة تصيد احتيالي 🚨</div>
+    </div>
+    <footer>هذه صفحة توعوية تعليمية وليست صفحة Google الأصلية</footer>
+</body>
+</html>
